@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
-import 'package:flutter_portfolio_1/constants/nav_items.dart';
+import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
 
@@ -13,51 +13,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final double kMinDesktopWidth = 600.0;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         key: scaffoldKey,
         backgroundColor: CustomColor.scaffoldBg,
-        endDrawer: constraints.maxWidth >= 600.0
+        endDrawer: constraints.maxWidth >= kMinDesktopWidth
             ? null
-            : Drawer(
-                backgroundColor: CustomColor.scaffoldBg,
-                child: ListView(
-                  children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            left: 20, top: 20, bottom: 20),
-                        child: IconButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            icon: const Icon(Icons.close)),
-                      ),
-                    ),
-                    for (int i = 0; i < nacIcons.length; i++)
-                      ListTile(
-                        contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 30.0,
-                        ),
-                        titleTextStyle: const TextStyle(
-                            color: CustomColor.whitePrimary,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16),
-                        onTap: () {},
-                        leading: Icon(nacIcons[i]),
-                        title: Text(navTitles[i]),
-                      )
-                  ],
-                ),
-              ),
+            : const DrawerMobile(),
         body: ListView(
           scrollDirection: Axis.vertical,
           children: [
             //MAIN
-            if (constraints.maxWidth >= 600.0)
+            if (constraints.maxWidth >= kMinDesktopWidth)
               const HeaderDesktop()
             else
               HeaderMobile(
@@ -85,7 +55,7 @@ class _HomePageState extends State<HomePage> {
               color: Colors.blueGrey,
             ),
             //FOOTER
-            Container(
+            const SizedBox(
               height: 500,
               width: double.maxFinite,
             )
