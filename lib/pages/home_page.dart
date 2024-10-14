@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
+import 'package:flutter_portfolio_1/constants/size.dart';
 import 'package:flutter_portfolio_1/constants/skillitems.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/mainDesktop.dart';
 import 'package:flutter_portfolio_1/widgets/skillsDesktop.dart';
+import 'package:flutter_portfolio_1/widgets/skillsMobile.dart';
 
 import '../widgets/mainMobile.dart';
 
@@ -18,7 +20,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final double kMinDesktopWidth = 600.0;
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -69,9 +71,10 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     height: 50,
                   ),
-
-                  //platforms skills
-                  const SkillsDesktop()
+                  if (constraints.maxWidth >= kMedDesktopWidth)
+                    const SkillsDesktop()
+                  else
+                    const SkillsMobile()
                 ],
               ),
             ),
