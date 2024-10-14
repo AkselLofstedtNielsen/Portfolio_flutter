@@ -5,6 +5,8 @@ import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/mainDesktop.dart';
 
+import '../widgets/mainMobile.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -40,7 +42,11 @@ class _HomePageState extends State<HomePage> {
                   scaffoldKey.currentState?.openEndDrawer();
                 },
               ),
-            MainDesktop(screenHeight: screenHeight, screenWidth: screenWidth),
+
+            if (constraints.maxWidth >= kMinDesktopWidth)
+              MainDesktop(screenHeight: screenHeight, screenWidth: screenWidth)
+            else
+              MainMobile(screenHeight: screenHeight, screenWidth: screenWidth),
             //SKILLS
             Container(
               height: 500,
