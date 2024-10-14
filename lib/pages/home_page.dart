@@ -3,6 +3,7 @@ import 'package:flutter_portfolio_1/constants/colors.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
+import 'package:flutter_portfolio_1/widgets/mainDesktop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +17,9 @@ class _HomePageState extends State<HomePage> {
   final double kMinDesktopWidth = 600.0;
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    final screenHeight = screenSize.height;
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         key: scaffoldKey,
@@ -36,6 +40,7 @@ class _HomePageState extends State<HomePage> {
                   scaffoldKey.currentState?.openEndDrawer();
                 },
               ),
+            MainDesktop(screenHeight: screenHeight, screenWidth: screenWidth),
             //SKILLS
             Container(
               height: 500,
