@@ -41,9 +41,9 @@ class MainMobile extends StatelessWidget {
             height: 30,
           ),
           const Text(
-            "Hello \n I am aksel blabla",
+            "Im Aksel\n -Experienced Application Developer \n -Java Development student",
             style: TextStyle(
-              fontSize: 24.0,
+              fontSize: 18.0,
               height: 1.5,
               fontWeight: FontWeight.bold,
               color: CustomColor.whitePrimary,
@@ -51,7 +51,7 @@ class MainMobile extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           SizedBox(
-            width: 190,
+            width: screenWidth / 2,
             child: ElevatedButton(
                 onPressed: () {}, child: const Text("Get in touch")),
           )

@@ -26,7 +26,7 @@ class MainDesktop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "Hello \n I am aksel blabla",
+                "Im Aksel\n -Experienced Application Developer \n -Java Development student",
                 style: TextStyle(
                   fontSize: 30.0,
                   height: 1.5,
@@ -36,7 +36,7 @@ class MainDesktop extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               SizedBox(
-                width: 250,
+                width: screenWidth / 2,
                 child: ElevatedButton(
                     onPressed: () {}, child: const Text("Get in touch")),
               )

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
+import 'package:flutter_portfolio_1/constants/skillitems.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/mainDesktop.dart';
+import 'package:flutter_portfolio_1/widgets/skillsDesktop.dart';
 
 import '../widgets/mainMobile.dart';
 
@@ -49,9 +51,29 @@ class _HomePageState extends State<HomePage> {
               MainMobile(screenHeight: screenHeight, screenWidth: screenWidth),
             //SKILLS
             Container(
-              height: 500,
-              width: double.maxFinite,
-              color: Colors.blueGrey,
+              width: screenWidth,
+              padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
+              color: CustomColor.bgLight1,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  //title
+                  const Text(
+                    "What i can do",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: CustomColor.whitePrimary,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
+
+                  //platforms skills
+                  const SkillsDesktop()
+                ],
+              ),
             ),
             //PROJECTS
             Container(
