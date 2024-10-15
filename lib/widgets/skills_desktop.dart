@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
-import 'package:flutter_portfolio_1/constants/skillitems.dart';
+import 'package:flutter_portfolio_1/constants/skill_items.dart';
 
 class SkillsDesktop extends StatelessWidget {
   const SkillsDesktop({

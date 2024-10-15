@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
 import 'package:flutter_portfolio_1/constants/size.dart';
-import 'package:flutter_portfolio_1/constants/skillitems.dart';
+import 'package:flutter_portfolio_1/utils/project_util.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
-import 'package:flutter_portfolio_1/widgets/mainDesktop.dart';
-import 'package:flutter_portfolio_1/widgets/skillsDesktop.dart';
-import 'package:flutter_portfolio_1/widgets/skillsMobile.dart';
+import 'package:flutter_portfolio_1/widgets/main_desktop.dart';
+import 'package:flutter_portfolio_1/widgets/project_card.dart';
+import 'package:flutter_portfolio_1/widgets/skills_desktop.dart';
+import 'package:flutter_portfolio_1/widgets/skills_mobile.dart';
 
-import '../widgets/mainMobile.dart';
+import '../widgets/main_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -80,9 +81,26 @@ class _HomePageState extends State<HomePage> {
             ),
             //PROJECTS
             Container(
-              height: 500,
-              width: double.maxFinite,
-              color: Colors.blueGrey,
+              width: screenWidth,
+              padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+              child: Column(
+                children: [
+                  //Work project titles
+                  const Text(
+                    "Work projects",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: CustomColor.whitePrimary,
+                    ),
+                  ),
+
+                  //Work projects cards
+                  ProjectCardWidget(
+                    project: workProjectUtils.first,
+                  )
+                ],
+              ),
             ),
             //CONTACT
             Container(
