@@ -25,7 +25,7 @@ class ProjectCardWidget extends StatelessWidget {
           Image.asset(
             project.image,
             height: 200,
-            width: 250,
+            width: 260,
             fit: BoxFit.cover,
           ),
           //Title
@@ -42,7 +42,7 @@ class ProjectCardWidget extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Text(
               project.subtitle,
-              style: TextStyle(fontSize: 10, color: CustomColor.whiteSecondary),
+              style: TextStyle(fontSize: 12, color: CustomColor.whiteSecondary),
             ),
           ),
           const Spacer(),

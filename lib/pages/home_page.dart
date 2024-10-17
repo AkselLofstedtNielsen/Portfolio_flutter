@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
 import 'package:flutter_portfolio_1/constants/size.dart';
-import 'package:flutter_portfolio_1/utils/project_util.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/main_desktop.dart';
-import 'package:flutter_portfolio_1/widgets/project_card.dart';
+import 'package:flutter_portfolio_1/widgets/projects_section.dart';
 import 'package:flutter_portfolio_1/widgets/skills_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/skills_mobile.dart';
 
@@ -79,35 +78,30 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            //PROJECTS
-            Container(
-              width: screenWidth,
-              padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-              child: Column(
-                children: [
-                  //Work project titles
-                  const Text(
-                    "Work projects",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: CustomColor.whitePrimary,
-                    ),
-                  ),
 
-                  //Work projects cards
-                  ProjectCardWidget(
-                    project: workProjectUtils.first,
-                  )
-                ],
-              ),
-            ),
+            const SizedBox(height: 30),
+
+            //PROJECTS
+            ProjectsSection(screenWidth: screenWidth),
+
+            const SizedBox(height: 30),
+
             //CONTACT
             Container(
-              height: 500,
-              width: double.maxFinite,
-              color: Colors.blueGrey,
+              child: Column(
+                children: [
+                  //Title
+                  Text("Get in touch",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: CustomColor.whitePrimary))
+                ],
+              ),
+              padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
+              color: CustomColor.bgLight1,
             ),
+
             //FOOTER
             const SizedBox(
               height: 500,
