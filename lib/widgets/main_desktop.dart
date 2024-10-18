@@ -6,8 +6,10 @@ class MainDesktop extends StatelessWidget {
     super.key,
     required this.screenHeight,
     required this.screenWidth,
+    required this.navigate,
   });
 
+  final Function navigate;
   final double screenHeight;
   final double screenWidth;
 
@@ -38,7 +40,10 @@ class MainDesktop extends StatelessWidget {
               SizedBox(
                 width: screenWidth / 2,
                 child: ElevatedButton(
-                    onPressed: () {}, child: const Text("Get in touch")),
+                    onPressed: () {
+                      navigate;
+                    },
+                    child: const Text("Get in touch")),
               )
             ],
           ),
