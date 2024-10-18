@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
 import 'package:flutter_portfolio_1/constants/size.dart';
+import 'package:flutter_portfolio_1/widgets/contact_section.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
@@ -87,20 +88,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 30),
 
             //CONTACT
-            Container(
-              child: Column(
-                children: [
-                  //Title
-                  Text("Get in touch",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24,
-                          color: CustomColor.whitePrimary))
-                ],
-              ),
-              padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
-              color: CustomColor.bgLight1,
-            ),
+            ContactSection(),
 
             //FOOTER
             const SizedBox(
