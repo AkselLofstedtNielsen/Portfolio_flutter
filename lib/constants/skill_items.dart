@@ -4,23 +4,50 @@ const List<Map> platformItems = [
     "title": "Android Dev",
   },
   {
-    "img": "assets/web_icon.png",
-    "title": "Web Dev",
-  },
-  {
     "img": "assets/ios_icon.png",
     "title": "IOS Dev",
   },
   {
-    "img": "assets/desktop_icon.png",
-    "title": "Desktop Dev",
+    "img": "assets/web_icon.png",
+    "title": "Web Dev",
+  },
+  {
+    "img": "assets/cross_platform.png",
+    "title": "Cross P Dev",
   }
 ];
 
-const List<Map> skillItems = [
+const List<Map> frameworkItems = [
   {
     "img": "assets/flutter.png",
     "title": "Flutter",
+  },
+  {
+    "img": "assets/jetpack_compose.png",
+    "title": "Jetpack Compose",
+  },
+  {
+    "img": "assets/swift.png",
+    "title": "Swift UI",
+  },
+  {
+    "img": "assets/react.png",
+    "title": "React",
+  },
+];
+
+const List<Map> languageItems = [
+  {
+    "img": "assets/kotlin.png",
+    "title": "Kotlin",
+  },
+  {
+    "img": "assets/swift.png",
+    "title": "Swift",
+  },
+  {
+    "img": "assets/java.png",
+    "title": "Java",
   },
   {
     "img": "assets/dart.png",
@@ -38,16 +65,4 @@ const List<Map> skillItems = [
     "img": "assets/javascript.png",
     "title": "JS",
   },
-  {
-    "img": "assets/hugo.png",
-    "title": "Hugo",
-  },
-  {
-    "img": "assets/docker.png",
-    "title": "Docker",
-  },
-  {
-    "img": "assets/python.png",
-    "title": "Python",
-  }
 ];

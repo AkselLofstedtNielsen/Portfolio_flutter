@@ -27,28 +27,49 @@ class SkillsMobile extends StatelessWidget {
               child: ListTile(
                 contentPadding: const EdgeInsets.symmetric(
                     vertical: 10.0, horizontal: 20.0),
-                leading: Image.asset(platformItems[i]["img"]),
+                leading: Image.asset(
+                  platformItems[i]["img"],
+                  color: CustomColor.whitePrimary,
+                ),
                 title: Text(platformItems[i]["title"]),
               ),
             ),
-          const SizedBox(
-            height: 30,
-          ),
-          //skills
+
+          const Divider(),
+
+          //Language
           Wrap(
             spacing: 10.0,
             runSpacing: 10.0,
             alignment: WrapAlignment.center,
             children: [
-              for (int i = 0; i < skillItems.length; i++)
+              for (int i = 0; i < languageItems.length; i++)
                 Chip(
                   padding: const EdgeInsets.symmetric(
                       vertical: 12.0, horizontal: 16.0),
-                  label: Text(skillItems[i]["title"]),
-                  avatar: Image.asset(skillItems[i]["img"]),
+                  label: Text(languageItems[i]["title"]),
+                  avatar: Image.asset(languageItems[i]["img"]),
                 )
             ],
-          )
+          ),
+
+          const Divider(),
+          //Frameworks
+
+          Wrap(
+            spacing: 10.0,
+            runSpacing: 10.0,
+            alignment: WrapAlignment.center,
+            children: [
+              for (int i = 0; i < frameworkItems.length; i++)
+                Chip(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 12.0, horizontal: 16.0),
+                  label: Text(frameworkItems[i]["title"]),
+                  avatar: Image.asset(frameworkItems[i]["img"]),
+                )
+            ],
+          ),
         ],
       ),
     );

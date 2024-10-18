@@ -9,7 +9,7 @@ class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(25, 20, 25, 60),
+      padding: EdgeInsets.fromLTRB(25, 20, 25, 25),
       color: CustomColor.bgLight1,
       child: Column(
         children: [
@@ -34,8 +34,9 @@ class ContactSection extends StatelessWidget {
           ),
           const Divider(),
           //Icons
+
           Wrap(
-            spacing: 12,
+            spacing: 18,
             runSpacing: 12,
             alignment: WrapAlignment.center,
             children: [

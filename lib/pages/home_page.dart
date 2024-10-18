@@ -3,6 +3,7 @@ import 'package:flutter_portfolio_1/constants/colors.dart';
 import 'package:flutter_portfolio_1/constants/size.dart';
 import 'package:flutter_portfolio_1/widgets/contact_section.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
+import 'package:flutter_portfolio_1/widgets/footer.dart';
 import 'package:flutter_portfolio_1/widgets/header_desktop.dart';
 import 'package:flutter_portfolio_1/widgets/header_mobile.dart';
 import 'package:flutter_portfolio_1/widgets/main_desktop.dart';
@@ -91,10 +92,7 @@ class _HomePageState extends State<HomePage> {
             ContactSection(),
 
             //FOOTER
-            const SizedBox(
-              height: 500,
-              width: double.maxFinite,
-            )
+            Footer()
           ],
         ),
       );

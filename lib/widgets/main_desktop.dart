@@ -28,7 +28,7 @@ class MainDesktop extends StatelessWidget {
               const Text(
                 "Im Aksel\n -Experienced Application Developer \n -Java Development student",
                 style: TextStyle(
-                  fontSize: 30.0,
+                  fontSize: 22.0,
                   height: 1.5,
                   fontWeight: FontWeight.bold,
                   color: CustomColor.whitePrimary,
