@@ -46,7 +46,9 @@ class SkillsDesktop extends StatelessWidget {
             ),
           ],
         ),
-        const Divider(),
+        const Divider(
+          color: CustomColor.textShadeTwo,
+        ),
 
         //Languages
         Row(
@@ -54,13 +56,14 @@ class SkillsDesktop extends StatelessWidget {
           children: [
             Flexible(
               child: ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 800),
+                constraints: BoxConstraints(maxWidth: 1000),
                 child: Wrap(
                   spacing: 10.0,
                   runSpacing: 10.0,
                   children: [
                     for (int i = 0; i < languageItems.length; i++)
                       Chip(
+                        backgroundColor: CustomColor.bgLight1,
                         padding: const EdgeInsets.symmetric(
                             vertical: 12.0, horizontal: 16.0),
                         label: Text(languageItems[i]["title"]),
@@ -73,7 +76,9 @@ class SkillsDesktop extends StatelessWidget {
           ],
         ),
 
-        const Divider(),
+        const Divider(
+          color: CustomColor.textShadeTwo,
+        ),
 
         //Frameworks
         Row(
@@ -81,13 +86,14 @@ class SkillsDesktop extends StatelessWidget {
           children: [
             Flexible(
               child: ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 800),
+                constraints: BoxConstraints(maxWidth: 1000),
                 child: Wrap(
                   spacing: 10.0,
                   runSpacing: 10.0,
                   children: [
                     for (int i = 0; i < frameworkItems.length; i++)
                       Chip(
+                        backgroundColor: CustomColor.bgLight1,
                         padding: const EdgeInsets.symmetric(
                             vertical: 12.0, horizontal: 16.0),
                         label: Text(frameworkItems[i]["title"]),

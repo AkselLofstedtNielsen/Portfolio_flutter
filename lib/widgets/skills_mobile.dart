@@ -35,7 +35,9 @@ class SkillsMobile extends StatelessWidget {
               ),
             ),
 
-          const Divider(),
+          const Divider(
+            color: CustomColor.textShadeTwo,
+          ),
 
           //Language
           Wrap(
@@ -45,6 +47,7 @@ class SkillsMobile extends StatelessWidget {
             children: [
               for (int i = 0; i < languageItems.length; i++)
                 Chip(
+                  backgroundColor: CustomColor.bgLight1,
                   padding: const EdgeInsets.symmetric(
                       vertical: 12.0, horizontal: 16.0),
                   label: Text(languageItems[i]["title"]),
@@ -53,7 +56,9 @@ class SkillsMobile extends StatelessWidget {
             ],
           ),
 
-          const Divider(),
+          const Divider(
+            color: CustomColor.textShadeTwo,
+          ),
           //Frameworks
 
           Wrap(
@@ -63,6 +68,7 @@ class SkillsMobile extends StatelessWidget {
             children: [
               for (int i = 0; i < frameworkItems.length; i++)
                 Chip(
+                  backgroundColor: CustomColor.bgLight1,
                   padding: const EdgeInsets.symmetric(
                       vertical: 12.0, horizontal: 16.0),
                   label: Text(frameworkItems[i]["title"]),

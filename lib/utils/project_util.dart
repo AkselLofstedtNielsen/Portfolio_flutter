@@ -25,11 +25,11 @@ class ProjectUtils {
 //Personal projects
 List<ProjectUtils> hobbyProjectUtils = [
   ProjectUtils(
-      image: 'assets/projects/typeFight_proj.png',
-      title: 'Typing game for IOS',
+      image: 'assets/projects/portfolio_proj.png',
+      title: 'The current Portfolio',
       subtitle:
-          'A fun multiplayer game using Firebase, written in Swift using SwiftUI',
-      githubLink: 'https://github.com/AkselLofstedtNielsen/WordGameIOS-V.1'),
+          'Simple portfolio application, fully responsive. Made in Flutter with Dart',
+      githubLink: 'https://github.com/AkselLofstedtNielsen/Portfolio_flutter'),
   ProjectUtils(
       image: 'assets/projects/typeFight_proj.png',
       title: 'Typing game for IOS',
@@ -37,11 +37,11 @@ List<ProjectUtils> hobbyProjectUtils = [
           'A fun multiplayer game using Firebase, written in Swift using SwiftUI',
       githubLink: 'https://github.com/AkselLofstedtNielsen/WordGameIOS-V.1'),
   ProjectUtils(
-      image: 'assets/projects/typeFight_proj.png',
-      title: 'Typing game for IOS',
+      image: 'assets/projects/fake_mecenat.png',
+      title: 'Fake Mecenat App',
       subtitle:
-          'A fun multiplayer game using Firebase, written in Swift using SwiftUI',
-      githubLink: 'https://github.com/AkselLofstedtNielsen/WordGameIOS-V.1')
+          'A design challenge for myself, the mecenat app with some added functionality. Written in Kotlin with Jetpack Compose + Dagger Hilt',
+      githubLink: 'https://github.com/AkselLofstedtNielsen/NotRealMecenat')
   //Add more personal projects here
 ];
 
@@ -54,19 +54,5 @@ List<ProjectUtils> workProjectUtils = [
         'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
     toBeReleased: true,
   ),
-  ProjectUtils(
-    image: 'assets/projects/qmentoria_proj.png',
-    title: 'Mentorship application',
-    subtitle:
-        'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
-    toBeReleased: true,
-  ),
-  ProjectUtils(
-    image: 'assets/projects/qmentoria_proj.png',
-    title: 'Mentorship application',
-    subtitle:
-        'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
-    toBeReleased: true,
-  )
   //Add more work projects here
 ];
