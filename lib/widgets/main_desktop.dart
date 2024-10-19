@@ -43,16 +43,53 @@ class MainDesktop extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  const Text(
-                    "I'm Aksel\n -Experienced Application Developer \n -Java Development student",
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      height: 1.5,
-                      fontWeight: FontWeight.bold,
-                      color: CustomColor.whitePrimary,
+                  ShaderMask(
+                    shaderCallback: (bounds) => LinearGradient(
+                      colors: [
+                        CustomColor.textShadeOne,
+                        CustomColor.textShadeTwo
+                      ],
+                    ).createShader(bounds),
+                    child: const Text(
+                      "Experienced Application Developer",
+                      style: TextStyle(
+                          fontSize: 22.0,
+                          height: 1.5,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.whitePrimary,
+                          shadows: [
+                            Shadow(
+                                blurRadius: 10.0,
+                                color: Colors.black26,
+                                offset: Offset(5, 5))
+                          ]),
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  ShaderMask(
+                    shaderCallback: (bounds) => LinearGradient(
+                      colors: [
+                        CustomColor.textShadeOne,
+                        CustomColor.textShadeTwo
+                      ],
+                    ).createShader(bounds),
+                    child: const Text(
+                      "Java development student",
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          height: 1.5,
+                          fontWeight: FontWeight.bold,
+                          color: CustomColor.whitePrimary,
+                          shadows: [
+                            Shadow(
+                                blurRadius: 10.0,
+                                color: Colors.black26,
+                                offset: Offset(5, 5))
+                          ]),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   SizedBox(
                     width: screenWidth / 2,
                     child: ElevatedButton(

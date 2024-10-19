@@ -1,7 +1,5 @@
 //All of the project informations
 
-import 'dart:ffi';
-
 class ProjectUtils {
   final String image;
   final String title;
