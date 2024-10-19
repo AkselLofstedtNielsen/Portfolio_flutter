@@ -34,6 +34,14 @@ const List<Map> frameworkItems = [
     "img": "assets/react.png",
     "title": "React",
   },
+  {
+    "img": "assets/db_logo.png",
+    "title": "SQL/NoSQL",
+  },
+  {
+    "img": "assets/github.png",
+    "title": "Git/Github",
+  },
 ];
 
 const List<Map> languageItems = [
@@ -48,6 +56,10 @@ const List<Map> languageItems = [
   {
     "img": "assets/java.png",
     "title": "Java",
+  },
+  {
+    "img": "assets/csharp_logo.png",
+    "title": "C#",
   },
   {
     "img": "assets/dart.png",

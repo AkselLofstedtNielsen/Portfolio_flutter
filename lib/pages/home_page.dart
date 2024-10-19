@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
-import 'package:flutter_portfolio_1/constants/nav_items.dart';
 import 'package:flutter_portfolio_1/constants/size.dart';
 import 'package:flutter_portfolio_1/widgets/contact_section.dart';
 import 'package:flutter_portfolio_1/widgets/drawer_mobile.dart';
