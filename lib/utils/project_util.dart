@@ -1,5 +1,7 @@
 //All of the project informations
 
+import 'dart:ffi';
+
 class ProjectUtils {
   final String image;
   final String title;
@@ -9,6 +11,7 @@ class ProjectUtils {
   final String? androidLink;
   final String? iosLink;
   final String? webLink;
+  final bool? toBeReleased;
 
   ProjectUtils(
       {required this.image,
@@ -17,7 +20,8 @@ class ProjectUtils {
       this.githubLink,
       this.androidLink,
       this.iosLink,
-      this.webLink});
+      this.webLink,
+      this.toBeReleased});
 }
 
 //Personal projects
@@ -50,18 +54,21 @@ List<ProjectUtils> workProjectUtils = [
     title: 'Mentorship application',
     subtitle:
         'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
+    toBeReleased: true,
   ),
   ProjectUtils(
     image: 'assets/projects/qmentoria_proj.png',
     title: 'Mentorship application',
     subtitle:
         'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
+    toBeReleased: true,
   ),
   ProjectUtils(
     image: 'assets/projects/qmentoria_proj.png',
     title: 'Mentorship application',
     subtitle:
         'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
+    toBeReleased: true,
   )
   //Add more work projects here
 ];

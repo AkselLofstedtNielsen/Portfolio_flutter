@@ -18,7 +18,6 @@ class MainDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Grayscale semi-transparent background image
         Positioned.fill(
           child: ColorFiltered(
             colorFilter: bgColorFilter,
@@ -60,7 +59,10 @@ class MainDesktop extends StatelessWidget {
                       onPressed: () {
                         navigate();
                       },
-                      child: const Text("Get in touch"),
+                      child: const Text(
+                        "Get in touch",
+                        style: TextStyle(color: CustomColor.whitePrimary),
+                      ),
                     ),
                   )
                 ],

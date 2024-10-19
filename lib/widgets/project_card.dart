@@ -108,6 +108,12 @@ class ProjectCardWidget extends StatelessWidget {
                       ),
                     ),
                   ),
+                if (project.toBeReleased == true)
+                  Text(
+                    "(Awaiting release)",
+                    style: TextStyle(
+                        color: CustomColor.yellowSecondary, fontSize: 12),
+                  ),
               ],
             ),
           )

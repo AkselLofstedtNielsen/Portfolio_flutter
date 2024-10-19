@@ -24,7 +24,6 @@ class MainMobile extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            // Grayscale semi-transparent background image
             Positioned.fill(
               child: ColorFiltered(
                 colorFilter: bgColorFilter,
@@ -60,7 +59,10 @@ class MainMobile extends StatelessWidget {
                       onPressed: () {
                         navigate();
                       },
-                      child: const Text("Get in touch"),
+                      child: const Text(
+                        "Get in touch",
+                        style: TextStyle(color: CustomColor.whitePrimary),
+                      ),
                     ),
                   )
                 ],
