@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 class ContactSection extends StatelessWidget {
   const ContactSection({
     super.key,
@@ -41,14 +43,20 @@ class ContactSection extends StatelessWidget {
             alignment: WrapAlignment.center,
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  launchUrl(
+                      Uri.parse("https://github.com/AkselLofstedtNielsen"));
+                },
                 child: Image.asset(
                   "assets/github.png",
                   width: 35,
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  launchUrl(Uri.parse(
+                      "https://github.com/https://www.linkedin.com/in/aksel-nielsen-27734b209/"));
+                },
                 child: Image.asset(
                   "assets/linkedin.png",
                   width: 35,

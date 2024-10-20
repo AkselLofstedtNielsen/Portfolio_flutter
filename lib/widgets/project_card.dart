@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio_1/constants/colors.dart';
 import 'package:flutter_portfolio_1/utils/project_util.dart';
 
-//Find alternative js not working
-//import 'dart:js_interop' as js;
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCardWidget extends StatelessWidget {
   const ProjectCardWidget({super.key, required this.project});
@@ -61,8 +60,7 @@ class ProjectCardWidget extends StatelessWidget {
                 if (project.githubLink != null)
                   InkWell(
                     onTap: () {
-                      //Find alternative to js
-                      //js.context.callMethod("open", [project.githubLink]);
+                      launchUrl(Uri.parse(project.githubLink!));
                     },
                     child: Image.asset(
                       "assets/github.png",
@@ -74,7 +72,7 @@ class ProjectCardWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 6),
                     child: InkWell(
                       onTap: () {
-                        //js.context.callMethod("open", [project.androidLink]);
+                        launchUrl(Uri.parse(project.androidLink!));
                       },
                       child: Image.asset(
                         "assets/android_icon.png",
@@ -87,7 +85,7 @@ class ProjectCardWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 6),
                     child: InkWell(
                       onTap: () {
-                        //js.context.callMethod("open", [project.iosLink]);
+                        launchUrl(Uri.parse(project.iosLink!));
                       },
                       child: Image.asset(
                         "assets/ios_icon.png",
@@ -100,7 +98,7 @@ class ProjectCardWidget extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 6),
                     child: InkWell(
                       onTap: () {
-                        //js.context.callMethod("open", [project.webLink]);
+                        launchUrl(Uri.parse(project.webLink!));
                       },
                       child: Image.asset(
                         "assets/web_icon.png",
