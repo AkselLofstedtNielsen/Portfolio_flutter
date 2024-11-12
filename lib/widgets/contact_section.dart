@@ -55,7 +55,7 @@ class ContactSection extends StatelessWidget {
               InkWell(
                 onTap: () {
                   launchUrl(Uri.parse(
-                      "https://github.com/https://www.linkedin.com/in/aksel-nielsen-27734b209/"));
+                      "https://www.linkedin.com/in/aksel-nielsen-27734b209/"));
                 },
                 child: Image.asset(
                   "assets/linkedin.png",

@@ -41,7 +41,7 @@ List<ProjectUtils> hobbyProjectUtils = [
       title: 'Fake Mecenat App',
       subtitle:
           'A design challenge for myself, the mecenat app with some added functionality. Written in Kotlin with Jetpack Compose + Dagger Hilt',
-      githubLink: 'https://github.com/AkselLofstedtNielsen/NotRealMecenat')
+      githubLink: 'https://github.com/AkselLofstedtNielsen/NotRealMecenat'),
   //Add more personal projects here
 ];
 
@@ -54,5 +54,11 @@ List<ProjectUtils> workProjectUtils = [
         'Qmentoria Mentorship by Consid, written in Kotlin using Jetpack compose. (Not yet published)',
     toBeReleased: true,
   ),
+  ProjectUtils(
+      image: 'assets/projects/webbApp_proj.png',
+      title: 'Movie web app',
+      subtitle: 'Collaborated Movie database web app. Made with JS and React',
+      webLink: "https://aksellofstedtnielsen.github.io/WebbAppProject/",
+      githubLink: 'https://github.com/AkselLofstedtNielsen/WebbAppProject')
   //Add more work projects here
 ];

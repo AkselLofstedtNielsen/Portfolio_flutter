@@ -89,15 +89,15 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     //title
                     const Text(
-                      "What i can do",
+                      "Languages and technologies i am proficient in",
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: CustomColor.whitePrimary,
                       ),
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 25,
                     ),
                     if (constraints.maxWidth >= kMedDesktopWidth)
                       const SkillsDesktop()
